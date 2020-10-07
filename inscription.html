@@ -1,0 +1,173 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="connexion.css" />
+    <title>Inscription - portail Moldu de Poudlard</title>
+</head>
+
+<body id="bodyInscription">
+
+    <header>
+        <h1>Inscription à Poudlard</h1>
+        <h3>Tes parents sont Moldus mais tu as des pouvoirs ? Tu es au bon endroit !</h3>
+    </header>
+
+
+    <main class="flex">
+
+        <!--gauche-->
+        <section>
+
+            <article>
+                <img src="https://www.bigw.com.au/medias/sys_master/images/images/hf0/h79/12629803958302.jpg"
+                     alt="choixpeau" id="choixpeau"/>
+            </article>
+
+        </section>
+
+
+        <!--droite-->
+        <section>
+
+            <article>
+                <h2>Inscription sur le Portail Moldu de Poudlard</h2>
+            </article>
+
+            <article>
+                <form action="" method="post">
+                    <fieldset>
+                        <legend>Ton compte</legend>
+
+                        <div>
+                            <label for="login">Identifiant</label>
+                            <input type="text" id="login" name="login" placeholder="sorcieredudimanche666" required>
+                        </div>
+
+                        <div>
+                            <label for="mdp">Mot de passe</label>
+                            <input type="password" id="mdp" name="mdp">
+                        </div>
+
+                        <div>
+                            <label for="mdp">Confirmation du mot de passe</label>
+                            <input type="password" id="mdp" name="mdp" required>
+                        </div>
+
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Ta personne</legend>
+
+                        <div>
+                            <label for="prenom">Prénom</label>
+                            <input type="text" id="prenom" placeholder="Colin" name="prenom">
+                        </div>
+
+                        <div>
+                            <label for="nom">Nom de famille</label>
+                            <input type="text" id="nom" placeholder="Crivey" name="nom">
+                        </div>
+
+                        <div>
+                            <label for="date">Date de naissance</label>
+                            <input type="date" id="date" name="dateDeNaissance">
+                        </div>
+
+                        <div>
+                            <label for="genre">Genre</label>
+                            <select id="genre" name=genre>
+                                <option value="sorciere">Sorcière</option>
+                                <option value="sorcier">Sorcier</option>
+                                <option value="rainbow">Rainbow</option>
+                                <option value="fluide">Fluide</option>
+                                <option value="nonBinaire">Non Binaire</option>
+                                <option value="no">Ne souhaite pas répondre</option>
+                            </select>
+                        </div>
+
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Contact</legend>
+                        <div>
+                            <label for="email">Adresse email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div>
+                            <label for="tel">Téfélone</label>
+                            <input type="tel" id="tel" name="telephone" minlenght="10" maxlength="14" placeholder="0123456789">
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Dis-nous en un peu plus...</legend>
+                        <div>
+                            <textarea name="presentation" placeholder="Présente-toi en quelques lignes"></textarea>
+                        </div>
+
+                        <div>
+                            <label for="etudes">Niveau d'études</label>
+                            <select name="niveauEtudes" id="etudes">
+                                <option value="CM2">CM2</option>
+                                <option value="premiereAnnee">Première Année</option>
+                                <option value="BUSES">BUSES</option>
+                                <option value="ASPIC">ASPIC</option>
+                            </select>
+                        </div>
+
+                        <div>
+
+                            <p>Tes hobbies</p>
+
+                            <p>
+                                <input type="checkbox" id="hobby1" name="hobby1" value="Jouer avec mes amis et mes peluches">
+                                <label for="hobby1">Jouer avec mes amis et mes peluches</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox" id="hobby2" name="hobby2" value="Faire des farces et des grimaces">
+                                <label for="hobby2">Faire des farces et des grimaces</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox" id="hobby3" name="hobby3" value="Lire le dictionnaire et les journaux">
+                                <label for="hobby3">Lire le dictionnaire et les journaux</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox" id="hobby4" name="hobby4" value="Sauver le monde">
+                                <label for="hobby4">Sauver le monde</label>
+                            </p>
+
+                        </div>
+                    </fieldset>
+
+                    <div>
+                        <button type=“button”><a href=connexion.html>Envoyer le hibou</a></button>
+                    </div>
+
+                </form>
+
+            </article>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>Site créé et maintenu par L'AANM - Association des Amis des Nés-Moldus - , avec l'aimable participation de Miss Hermione Granger</p>
+        <p>Collège Poudlard - Ecole de Sorcellerie depuis le Xe siècle</p>
+    </footer>
+
+</body>
+
+
+
+</html>
