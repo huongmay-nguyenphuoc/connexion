@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="connexion.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Parisienne&display=swap" rel="stylesheet">
     <title>Inscription - portail Moldu de Poudlard</title>
 </head>
 
@@ -17,7 +18,7 @@
 
     <main class="flex">
 
-        <!--gauche-->
+        <!--gauche, choixpeau-->
         <section>
 
             <article>
@@ -28,20 +29,23 @@
         </section>
 
 
-        <!--droite-->
+        <!--droite, formulaire-->
         <section>
 
             <article>
                 <h2>Inscription sur le Portail Moldu de Poudlard</h2>
+                <p>Les champs obligatoires sont suivis de <abbr title="obligatoire">*</abbr>.</p>
             </article>
 
             <article>
                 <form action="" method="post">
+
+<!--champ compte-->
                     <fieldset>
                         <legend>Ton compte</legend>
 
                         <div>
-                            <label for="login">Identifiant</label>
+                            <label for="login">Identifiant <abbr title="obligatoire">*</abbr></label>
                             <input type="text" id="login" name="login" placeholder="sorcieredudimanche666" required>
                         </div>
 
@@ -51,7 +55,7 @@
                         </div>
 
                         <div>
-                            <label for="mdp">Confirmation du mot de passe</label>
+                            <label for="mdp">Confirmation du mot de passe <abbr title="obligatoire">*</abbr></label>
                             <input type="password" id="mdp" name="mdp" required>
                         </div>
 
@@ -77,8 +81,8 @@
                         </div>
 
                         <div>
-                            <label for="genre">Genre</label>
-                            <select id="genre" name=genre>
+                            <label for="genre">Genre <abbr title="obligatoire">*</abbr></label>
+                            <select id="genre" name="genre" required>
                                 <option value="sorciere">Sorcière</option>
                                 <option value="sorcier">Sorcier</option>
                                 <option value="rainbow">Rainbow</option>
@@ -94,7 +98,7 @@
                     <fieldset>
                         <legend>Contact</legend>
                         <div>
-                            <label for="email">Adresse email</label>
+                            <label for="email">Adresse email <abbr title="obligatoire">*</abbr></label>
                             <input type="email" id="email" name="email" required>
                         </div>
 
@@ -108,12 +112,13 @@
                     <fieldset>
                         <legend>Dis-nous en un peu plus...</legend>
                         <div>
-                            <textarea name="presentation" placeholder="Présente-toi en quelques lignes"></textarea>
+                            <label for="presentation">Présentation</label>
+                            <textarea name="presentation" id="presentation" placeholder="Présente-toi en quelques lignes"></textarea>
                         </div>
 
                         <div>
-                            <label for="etudes">Niveau d'études</label>
-                            <select name="niveauEtudes" id="etudes">
+                            <label for="etudes">Niveau d'études <abbr title="obligatoire">*</abbr></label>
+                            <select name="niveauEtudes" id="etudes" required>
                                 <option value="CM2">CM2</option>
                                 <option value="premiereAnnee">Première Année</option>
                                 <option value="BUSES">BUSES</option>
@@ -149,7 +154,7 @@
                     </fieldset>
 
                     <div>
-                        <button type=“button”><a href=connexion.html>Envoyer le hibou</a></button>
+                        <button type="button"> <a href=connexion.html>Envoyer le hibou</a> </button>
                     </div>
 
                 </form>
@@ -167,7 +172,5 @@
     </footer>
 
 </body>
-
-
 
 </html>

@@ -1,18 +1,178 @@
-﻿body
-{
+﻿/*GENERAL*/
+
+body {
     margin: 0;
     padding: 0;
     height: 100vh;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .flex {
     display: flex;
 }
 
-#bodyConnexion {
+/* taille police */
+p, a, span {
+    font-size: 0.7em;
+}
+
+/*Liens*/
+
+
+/*HEADER*/
+header {
+    font-family: 'Parisienne', cursive;
+    text-align: center;
+    font-size: 1.3em;
+    border-bottom: 1px solid rgba(253,246,246,0.3);
+}
+
+/*FOOTER*/
+footer {
+    border-top: 1px solid rgba(253,246,246,0.3);
+    position: relative;
+    left: 20px;
 }
 
 
+
+
+/*FORMULAIRES*/
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Input: champs de texte*/
+input, select, textarea {
+    font-size: 100%;
+    background: none;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+
+/*libellés, boutons*/
+    label, input[type=submit] {
+        text-transform: uppercase;
+        font-size: 1em;
+     
+    }
+
+/*Boutons*/
+    input[type=submit], button {
+        border-radius: 25px;
+        -webkit-appearance: none;
+        padding: 10px;
+        transition: 0.4s;
+        color: white;
+    }
+
+
+
+
+/*CONNEXION*/
+
+#connexion {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /*
+    background-image: url(https://www.myfreetextures.com/wp-content/uploads/2014/11/old-brown-paper-texture-image.jpg);*/
+    background-image: url(https://i.ytimg.com/vi/UIcd_lz_R5M/maxresdefault.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #791515;
+}
+
+/*main connexion: cadre central*/
+    #connexion main {
+        padding: 20px;
+        background-color: rgba(253,246,246,0.3);
+        border: 1px solid rgba(253,246,246,0.5);
+        border-radius: 0 25px 0 25px;
+    }
+
+
+/*couleurs - thème */
+#connexion a {
+    color: rgba(121,21,21,0.5);
+}
+
+#connexion a:hover {
+        color: #791515;
+    }
+
+
+#connexion input {
+    color: rgba(121,21,21,1);
+    border: 1px solid rgba(121,21,21,0.1);
+    
+}
+
+#connexion input:focus {
+    background-color: rgba(121,21,21,0.1);
+    border: 1px solid rgba(121,21,21,0.2);
+}
+
+    #connexion input[type=submit] {
+        background-color: rgba(121,21,21,0.2);
+        color: white;
+    }
+
+
+#connexion input[type=submit]:hover {
+    background: #791515;
+}
+
+    /*MOT DE PASSE*/
+    #bodyMdp {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+   background-image: url(https://vignette.wikia.nocookie.net/harrypotter/images/8/89/6.13.1_Pensieve_merged_black.jpg/revision/latest?cb=20160718230929);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+
+        #bodyMdp main {
+            max-width: 30vw;
+            min-width: 15vw;
+            text-align: justify;
+            background-color: rgba(0,0,0,0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        #bodyMdp input {
+            color: white;
+            background-color: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.3);
+            outline: none;
+        }
+
+            #bodyMdp input:focus {
+                border: 1px solid rgba(255,255,255,0.5);
+            }
+
+
+            #bodyMdp input[type=submit] {
+                background-color: rgba(0,0,0,1);
+                color: rgba(255,255,255,1);
+                opacity: 0.3;
+            }
+
+#bodyMdp input[type=submit]:hover {
+    opacity: 0.7;
+}
+
+
+/*INSCRIPTION*/
 #bodyInscription article {
     max-width: 50vw;
 }
@@ -21,3 +181,4 @@
     display: block;
     max-width: 50vw;
 }
+
