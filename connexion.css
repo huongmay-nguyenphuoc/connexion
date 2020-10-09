@@ -1,4 +1,26 @@
-﻿/*GENERAL*/
+﻿/*SOMMAIRE
+    1 - Général
+    2 - Connexion
+    3 - Mot de passe
+    4 - Inscription
+*/
+
+
+
+/*1 
+    --------------------------------------------------------------
+    GENERAL
+    --------------------------------------------------------------
+   mise en forme générale
+    polices
+    header
+    titres
+    footer
+    formulaire
+*/
+
+
+/*mise en forme*/
 
 h1, h3, .titre, footer, body {
     margin: 0;
@@ -6,23 +28,85 @@ h1, h3, .titre, footer, body {
 
 body {
     height: 100vh;
-    font-family: 'Open Sans', sans-serif;
-}
-
-textarea {
-    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .flex {
     display: flex;
 }
 
-/* taille police */
+
+/* POLICES */
+body, textarea {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titre {
+    font-family: 'Parisienne', cursive;
+    text-align: center;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
 p, a, span {
     font-size: 0.7em;
     text-decoration: none;
 }
 
+/*CHARGEMENT*/
+
+
+
+
+#chargement {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    animation: charg 10s linear 1 forwards;
+}
+
+@keyframes charg {
+    0% {
+        background-color: rgba(0,0,0,1);
+        z-index: 1;
+    }
+
+    100% {
+        background-color: rgba(0,0,0,0);
+        height: 0;
+        width: 0;
+        background: none;
+        display: none;
+        z-index: 0;
+        opacity: 0;
+    }
+}
+
+#imgChargement {
+    max-height: 50%;
+    animation: imgcharg 0.6s alternate 10;
+}
+
+
+@keyframes imgcharg {
+    0% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+
+    100% {
+        opacity: 0.1;
+        transform: scale(1.1);
+    }
+}
 
 /*HEADER*/
 .banniere {
@@ -32,27 +116,26 @@ p, a, span {
     transition: 1.5s;
 }
 
-.banniere:hover {
-    top: -15px;
-}
+    .banniere:hover {
+        top: -15px;
+    }
 
 
 /*TITRES*/
 .titre {
-    font-family: 'Parisienne', cursive;
     text-align: center;
-    font-size: 1.3em;
     border-bottom: 1px solid rgba(253,246,246,0.3);
 }
 
 /*FOOTER*/
 footer {
     border-top: 1px solid rgba(253,246,246,0.3);
-    position: relative;
 }
 
 
 /*FORMULAIRES*/
+
+/*label et champ l'un au dessus de l'autre*/
 form div {
     display: flex;
     flex-direction: column;
@@ -62,21 +145,23 @@ form div {
 input, select, textarea {
     font-size: 100%;
     background: none;
-    -moz-box-sizing: border-box; 
+    outline: none;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 15px; 
+    margin-top: 3px;
+    margin-bottom: 15px;
+    padding: 15px;
 }
 
 
-/*libellés, boutons*/
+    /*labels, boutons*/
     label, input[type=submit], button {
         text-transform: uppercase;
+        font-weight: 500;
         font-size: 1em;
     }
 
-/*Boutons*/
+    /*Boutons*/
     input[type=submit], button {
         border-radius: 25px;
         -webkit-appearance: none;
@@ -85,209 +170,236 @@ input, select, textarea {
     }
 
 
-/*CONNEXION*/
+/*2 
+    --------------------------------------------------------------
+    CONNEXION
+    --------------------------------------------------------------
+    général
+    section principale 
+    thème de couleur
+*/
 
-#connexion {
-    flex-direction: column;
-    align-items: center; 
+/*général*/
+
+#bodyConnexion {
     background-image: url(https://i.ytimg.com/vi/UIcd_lz_R5M/maxresdefault.jpg);
     background-size: cover;
     background-position: center;
     color: #791515;
 }
 
-    #connexion main {
+    #bodyConnexion main {
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         height: 80vh;
-}
-
-/*Connexion section: cadre central*/
-        #connexionSection {
-        background-color: rgba(253,246,246,0.3);
-        border: 1px solid rgba(253,246,246,0.5);
-        border-radius: 0 25px 0 25px;
-        padding: 20px;
     }
 
+/*section principale : encart de connexion*/
+#connexionSection {
+    background-color: rgba(253,246,246,0.3);
+    border: 1px solid rgba(253,246,246,0.5);
+    border-radius: 0 25px 0 25px;
+    padding: 20px;
+}
 
-/*couleurs - thème - liens, champs, bouton */
-#connexion a {
+
+/*Thème de couleur / hover
+    liens
+    inputs
+    bouton
+*/
+
+#bodyConnexion a {
     color: rgba(121,21,21,0.5);
 }
 
-#connexion a:hover {
+    #bodyConnexion a:hover {
         color: #791515;
     }
 
 
-#connexion input {
+#bodyConnexion input {
     color: rgba(121,21,21,1);
     border: 1px solid rgba(121,21,21,0.1);
-    
 }
 
-#connexion input:focus {
-    background-color: rgba(121,21,21,0.1);
-    border: 1px solid rgba(121,21,21,0.2);
-}
-
-    #connexion input[type=submit] {
-        background-color: rgba(121,21,21,0.2);
-        color: white;
+    #bodyConnexion input:focus {
+        background-color: rgba(121,21,21,0.1);
+        border: 1px solid rgba(121,21,21,0.2);
     }
 
 
-#connexion input[type=submit]:hover {
-    background: #791515;
+#bodyConnexion input[type=submit] {
+    background-color: #791515;
+    color: white;
+    opacity: 0.3;
+    transition: 0.4s;
 }
 
+    #bodyConnexion input[type=submit]:hover {
+        opacity: 1;
+    }
 
 
-    /*MOT DE PASSE*/
+
+
+/* 3 
+    --------------------------------------------------------------
+    MOT DE PASSE
+    --------------------------------------------------------------
+    general
+    paragraphe
+    input
+    bouton
+*/
+
+/*general*/
 
 #bodyMdp {
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
     background-image: url(https://vignette.wikia.nocookie.net/harrypotter/images/8/89/6.13.1_Pensieve_merged_black.jpg/revision/latest?cb=20160718230929);
     background-size: cover;
     background-position: center;
     color: white;
 }
 
+#bodyMdp main {
+    max-width: 30vw;
+    min-width: 15vw;
+    text-align: justify;
+    background-color: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#bodyMdp footer, #bodyMdp input {
+    color: grey;
+}
+
+/*paragraphe*/
     #bodyMdp h1, #bodyMdp h4 {
         font-family: 'La Belle Aurore', cursive;
         font-size: 1.3em;
-        animation-name: glow;
-        animation-duration: 4s;
-        animation-direction: alternate;
+        opacity: 0;
+        animation: glow 4s linear forwards;
     }
 
     #bodyMdp h5 {
         font-weight: 200;
-        color: black;
-
-        animation-name : glow;
-        animation-duration: 5s;
-        animation-direction: alternate;
-        animation-iteration-count: infinite;
+        opacity: 0;
+        animation: glow 5s 3s infinite alternate;
     }
 
-    @keyframes glow {
-        0% {
-            opacity: 0;
-            color: grey;
-            text-shadow: 0 0 0px white;
-        }
+@keyframes glow {
+    0% {
+        opacity: 0;
+        color: grey;
+        text-shadow: 0 0 0px white;
+    }
 
-        100% {
-            opacity: 1;
-            color: white;
-            text-shadow: 0 0 10px white;
-        }
-
-        }
-    
-
-        #bodyMdp main {
-            
-            max-width: 30vw;
-            min-width: 15vw;
-            text-align: justify;
-            background-color: rgba(0,0,0,0.6);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        #bodyMdp input {
-           color: grey;
-            background-color: rgba(0,0,0,0.4);
-            border: 1px solid rgba(255,255,255,0.3);
-            outline: none;
-        }
-
-            #bodyMdp input:focus {
-                border: 1px solid rgba(255,255,255,0.5);
-            }
-
-
-            #bodyMdp input[type=submit] {
-                background-color: rgba(0,0,0,1);
-                color: rgba(255,255,255,1);
-                opacity: 0.3;
-                transition: 0.4s;
-            }
-
-#bodyMdp input[type=submit]:hover {
-    opacity: 0.8;
-    border: 1px solid grey;
-
+    100% {
+        opacity: 1;
+        color: white;
+        text-shadow: 0 0 10px white;
+    }
 }
 
-    #bodyMdp footer {
-        color: grey;
+
+/*formulaire
+    input
+    bouton
+*/
+
+#bodyMdp input {
+    background-color: rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+    #bodyMdp input:focus {
+        border: 1px solid rgba(255,255,255,0.5);
+    }
+
+
+#bodyMdp input[type=submit] {
+    background-color: rgba(0,0,0,1);
+    color: white;
+    opacity: 0.3;
+    transition: 0.4s;
+}
+
+    #bodyMdp input[type=submit]:hover {
+        opacity: 0.8;
+        border: 1px solid grey;
     }
 
 
 
+/*4
+    --------------------------------------------------------------
+    INSCRIPTION
+    --------------------------------------------------------------
+    general
+    header
+    main
+    formulaire
+*/
 
-    /*INSCRIPTION*/
+/*general*/
 #bodyInscription {
     background-image: url(images/witch_background.png);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    flex-direction: column;
     color: white;
     height: 150vh;
-    justify-content: space-between;
 }
 
 
     #bodyInscription .titre {
-       
         background-color: black;
         border: none;
         position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1;
+        top: 0;
+        width: 100%;
+        z-index: 1; 
     }
-        
 
-#bodyInscription section {
-   justify-content: center;
-   
+
+    #bodyInscription main {
+        position: relative;
+        top: 15%;
+        z-index: 0;
+    }
+
+#asterisque {
+    text-shadow: 0px 0px 5px white;
+    color: #EAE6D5;
 }
 
-#bodyInscription main {
-    position: relative;
-    top: 15%;
-   z-index: 0;
+.colonne {
+    margin: 20px;
 }
 
-
-    .colonne {
-        margin: 20px;
-    }
 #bodyInscription form {
     background-color: rgba(0,0,0,0.7);
-    justify-content: space-around;
-    align-content: space-around;
 }
 
+/*formulaire
+    fielset
+    input
+    button
+
+*/
 fieldset {
     border: 1px solid rgba(234,230,213,0.5);
     color: rgba(234,230,213,1);
+    margin: 5px;
 }
 
 #bodyInscription input, textarea {
     color: white;
     background-color: rgba(0,0,0,0.2);
     border: 1px solid rgba(255,255,255,0.3);
-    outline: none;
 }
 
     #bodyInscription input:focus, textarea:focus {
@@ -300,22 +412,15 @@ fieldset {
     background-color: #DFD6B3;
     opacity: 0.5;
     transition: 0.5s;
-    margin: 5px;
-  
+    margin: 10px;
 }
 
- #bodyInscription a {
-     color: black;
-     font-size: 1em;
- }
+#bodyInscription a {
+    color: black;
+    font-size: 1em;
+}
 
 #bodyInscription button:hover {
     opacity: 1;
-  
-}
-
-#asterisque {
-    text-shadow: 0px 0px 5px white;
-    color: #EAE6D5;
 }
 

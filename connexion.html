@@ -10,70 +10,72 @@
 </head>
 
 
-<body class="flex" id="connexion">
-
-   
-<!--header-->
-    <header class="flex">
-            <img src="images/gryffindor.png" alt="banniere gryffondor" class="banniere " />
-            <img src="images/slytherin.png" alt="banniere serpentard" class="banniere " />
-            <img src="images/hufflepuff.png" alt="banniere poufsouffle" class="banniere " />
-            <img src="images/ravenclaw.png" alt="banniere serdaigle" class="banniere " />
-    </header>
-
-    <main class="flex">
-
-        <!--titre-->
-        <section class="titre">
-            <h1>Connexion au portail Moldu de Poudlard</h1>
-            <h3>Suis facilement ton dossier d'inscription grâce à la technologie magicomoldue !</h3>
-        </section>
+<body class="flex" id="bodyConnexion">
+    <div class="flex "id="chargement">
+        <img src="images/Hogwarts-Logo.png" alt="banniere Poudlard" id="imgChargement" />
+    </div>
 
 
-        <section id="connexionSection">
-
-            <!--formulaire-->
-            <article>
-                <form action="" method="post">
-
-                    <div>
-                        <label for="login">Identifiant</label>
-                        <input type="text" id="login" value="sorcieredudimanche666" name="login">
-                    </div>
-
-                    <div>
-                        <label for="mdp">Mot de passe</label>
-                        <input type="password" id="mdp" name="mdp">
-                    </div>
+        <!--header-->
+        <header class="flex">
+            <img src="images/gryffindor.png" alt="banniere gryffondor" class="banniere" />
+            <img src="images/slytherin.png" alt="banniere serpentard" class="banniere" />
+            <a href="connexion.html"><img src="images/hogwarts.png" alt="banniere poudlard" class="banniere" /></a>
+            <img src="images/hufflepuff.png" alt="banniere poufsouffle" class="banniere" />
+            <img src="images/ravenclaw.png" alt="banniere serdaigle" class="banniere" />
+        </header>
 
 
-                    <div>
-                        <input type="submit" value="Entrer à Poudlard">
-                    </div>
+        <main class="flex">
 
-                </form>
-            </article>
-
-
-            <!--inscription mot de passe-->
-            <article>
-                <a href="motdepasse.html">Mot de passe oublié ?</a><br>
-                <span>Pas encore inscrit.e à Poudlard ? </span><a href="inscription.html">Crée un compte</a>
-
-            </article>
-
-        </section>
+            <!--titre-->
+            <section class="titre">
+                <h1>Connexion au portail Moldu de Poudlard</h1>
+                <h3>Suis facilement ton dossier d'inscription grâce à la technologie magicomoldue !</h3>
+            </section>
 
 
-    </main>
+            <section id="connexionSection">
+                <article>
+
+                    <!--formulaire-->
+                    <form action="" method="post">
+
+                        <div>
+                            <label for="login">Identifiant</label>
+                            <input type="text" id="login" value="sorcieredudimanche666" name="login">
+                        </div>
+
+                        <div>
+                            <label for="mdp">Mot de passe</label>
+                            <input type="password" id="mdp" name="mdp">
+                        </div>
+
+                        <div>
+                            <input type="submit" value="Entrer à Poudlard">
+                        </div>
+
+                    </form>
+                </article>
+
+
+                <!--inscription/ mot de passe oublié-->
+                <article>
+                    <a href="motdepasse.html">Mot de passe oublié ?</a><br>
+                    <span>Pas encore inscrit.e à Poudlard ? </span><a href="inscription.html">Crée un compte</a>
+                </article>
+
+            </section>
+
+        </main>
 
 
 
-    <footer>
+        <footer>
+            <p>Site créé et maintenu par L'AANM - Association des Amis des Nés-Moldus - avec l'aimable participation de Miss Hermione Granger</p>
+            <p>Collège Poudlard - Ecole de Sorcellerie depuis le Xe siècle</p>
+        </footer>
 
-        <p>Site créé et maintenu par L'AANM - Association des Amis des Nés-Moldus - , avec l'aimable participation de Miss Hermione Granger</p>
-        <p>Collège Poudlard - Ecole de Sorcellerie depuis le Xe siècle</p>
-    </footer>
 
 </body>
 </html>
